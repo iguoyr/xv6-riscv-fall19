@@ -6,6 +6,8 @@
 
 char buf[1024];
 int match(char*, char*);
+int matchhere(char*, char*);
+int matchstar(int, char*, char*);
 
 void
 grep(char *pattern, int fd)
@@ -63,9 +65,6 @@ main(int argc, char *argv[])
 
 // Regexp matcher from Kernighan & Pike,
 // The Practice of Programming, Chapter 9.
-
-int matchhere(char*, char*);
-int matchstar(int, char*, char*);
 
 int
 match(char *re, char *text)
